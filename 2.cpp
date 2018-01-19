@@ -1,6 +1,5 @@
 
 #include<iostream>
-#include<conio.h>
 using namespace std;
 //node of a LinkedList
 class Node{
@@ -95,6 +94,7 @@ public:
             temp=head;
             head=temp->next;
             delete temp;
+            n--;
         }
         else {
             Node *locate;//to locate the position of the node to be deleted
@@ -106,6 +106,7 @@ public:
             temp=locate->next;
             locate->next=temp->next;
             delete temp;
+            n--;
         }
         }
 //number of elements in the LinkedList
